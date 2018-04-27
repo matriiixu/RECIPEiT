@@ -23,6 +23,8 @@
     <platform name="ios">
     </platform>
 	
+	<splash src="www/res/screen/splash.png" width="640" height="960"/>
+	
 	<access origin="*"/>
    	<plugin name="cordova-plugin-whitelist" version="1" />
 </widget>
