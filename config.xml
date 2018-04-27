@@ -24,7 +24,15 @@
     </platform>
 	
 	
-	<!--<splash src="www/res/screen/splash1.png" width="640" height="960"/>-->
+	<splash src="www/res/screen/splash1.1.png" width="320" height="480"/>
+    <splash src="www/res/screen/splash2.png" width="640" height="960"/>
+    <splash src="www/res/screen/splash3.png" width="768" height="1024"/>
+    <splash src="www/res/screen/splash4.png" width="1536" height="2048"/>
+    <splash src="www/res/screen/splash5.png" width="1024" height="768"/>
+    <splash src="www/res/screen/splash6.png" width="2048" height="1536"/>
+    <splash src="www/res/screen/splash7.png" width="640" height="1136"/>
+    <splash src="www/res/screen/splash8.png" width="750" height="1334"/>
+    <splash src="www/res/screen/splash9.png" width="1242" height="2208"/>
 	
 	<access origin="*"/>
    	<plugin name="cordova-plugin-whitelist" version="1" />
