@@ -23,7 +23,7 @@
     <platform name="ios">
     </platform>
 	
-    <plugin name="cordova-plugin-splashscreen">
+    <plugin name="cordova-plugin-splashscreen" />
     <splash src="www/res/screen/splash2.png" width="640" height="960"/>
 <!--    <splash src="www/res/screen/splash3.png" width="768" height="1024"/>
     <splash src="www/res/screen/splash4.png" width="1536" height="2048"/>
