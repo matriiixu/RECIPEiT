@@ -1,252 +1,119 @@
 <!DOCTYPE html>
 <html>
-    <head>
-       
-        <meta charset="utf-8">
-        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-        <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
-        <script type="text/javascript" src="cordova.js" defer></script>
-        <script type="text/javascript" src="js/index.js" defer></script>
-        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
-        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
-        <link rel="stylesheet" href="styles/index.css">
-        <title>Home | RECIPEiT</title>
-    </head>
-    
-    <body>
-    
-    
-    
-<!--------------------------------------------------------------------------------------------HOME-->
-    <div data-role="page" id="home">
-       
-        <div data-role="header">
-            <h1>Home</h1>
-        </div>
-       
-        <div data-role="main" class="ui-content"></div>
-        
-        <div id="side" data-position="right" data-role="panel" data-display="overlay">
-            <form  action="">
-                <input type="text" placeholder="Search...">
-             </form>
-            <a href="#home" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-home">Home</a>
-            <a href="#add" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-edit">Add</a>
-            <a href="#extras" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-cloud">Extras</a>
-            <a href="#login" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-myicon">Log In</a>
-            <a href="#signup" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-edit">Sign Up</a>
-        </div>
-        
-        <div data-role="footer" data-position="fixed">
-           
-            <div data-role="navbar">
-                <ul>
-                    <li><a data-rel="back" data-icon="carat-l"></a></li>
-                    <li><a href="#add" data-icon="edit"></a></li>
-                    <li><a href="#home" data-icon="home"></a></li>
-                    <li><a href="#login" data-icon="myicon"></a></li>
-                    <li><a href="#side" data-icon="search"></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-<!--------------------------------------------------------------------------------------------HOME-->
-    
-    
-    
-    
-<!---------------------------------------------------------------------------------------------ADD-->
-    <div data-role="page" id="add">
-       
-        <div data-role="header">
-            <h1>ADD</h1>
-        </div>
-       
-        <div data-role="main" class="ui-content"></div>
-        
-        <div id="side" data-position="right" data-role="panel" data-display="overlay">
-            <form  action="">
-                <input type="text" placeholder="Search...">
-             </form>
-            <a href="#home" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-home">Home</a>
-            <a href="#add" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-edit">Add</a>
-            <a href="#extras" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-cloud">Extras</a>
-            <a href="#login" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-myicon">Log In</a>
-            <a href="#signup" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-edit">Sign Up</a>
-        </div>
-        
-        <div data-role="footer" data-position="fixed">
-           
-            <div data-role="navbar">
-                <ul>
-                    <li><a data-rel="back" data-icon="carat-l"></a></li>
-                    <li><a href="#add" data-icon="edit"></a></li>
-                    <li><a href="#home" data-icon="home"></a></li>
-                    <li><a href="#login" data-icon="myicon"></a></li>
-                    <li><a href="#side" data-icon="search"></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-<!---------------------------------------------------------------------------------------------ADD-->
-    
-    
+  <head>
+    <!-- Required meta tags-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <!-- Color theme for statusbar -->
+    <meta name="theme-color" content="#2196f3">
+    <!-- Your app title -->
+    <title>My App</title>
+    <!-- Path to Framework7 Library CSS -->
+    <link rel="stylesheet" href="framework7-2.2.1/dist/css/framework7.min.css">
+    <link rel="stylesheet" href="framework7-2.2.1/icons/css/framework7-icons.css">
+    <link rel="stylesheet" href="styles/index.css">
+  </head>
+  <body>
+    <!-- App root element -->
+    <div id="app">
+      <!-- Statusbar overlay -->
+      <div class="statusbar"></div>
 
-   
+      <!-- Your main view, should have "view-main" class -->
+      <div class="view view-main">
+        <!-- Initial Page, "data-name" contains page name -->
+        <div data-name="home" class="page">
 
-<!------------------------------------------------------------------------------------------EXTRAS-->
-    <div data-role="page" id="extras">
-       
-        <div data-role="header">
-            <h1>EXTRAS</h1>
-        </div>
-       
-        <div data-role="main" class="ui-content"></div>
-        
-        <div id="side" data-position="right" data-role="panel" data-display="overlay">
-            <form  action="">
-                <input type="text" placeholder="Search...">
-             </form>
-            <a href="#home" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-home">Home</a>
-            <a href="#add" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-edit">Add</a>
-            <a href="#extras" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-cloud">Extras</a>
-            <a href="#login" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-myicon">Log In</a>
-            <a href="#signup" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-edit">Sign Up</a>
-        </div>
-        
-        <div data-role="footer" data-position="fixed">
-           
-            <div data-role="navbar">
-                <ul>
-                    <li><a data-rel="back" data-icon="carat-l"></a></li>
-                    <li><a href="#add" data-icon="edit"></a></li>
-                    <li><a href="#home" data-icon="home"></a></li>
-                    <li><a href="#login" data-icon="myicon"></a></li>
-                    <li><a href="#side" data-icon="search"></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-<!------------------------------------------------------------------------------------------EXTRAS-->
-    
-    
-    
-    
-<!-------------------------------------------------------------------------------------------LOGIN-->
-    <div data-role="page" id="login">
-       
-        <div data-role="header">
-            <h1>LOG IN</h1>
-        </div>
-       
-        <div data-role="main" class="ui-content"></div>
-        
-        <div id="side" data-position="right" data-role="panel" data-display="overlay">
-            <form  action="">
-                <input type="text" placeholder="Search...">
-             </form>
-            <a href="#home" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-home">Home</a>
-            <a href="#add" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-edit">Add</a>
-            <a href="#extras" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-cloud">Extras</a>
-            <a href="#login" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-myicon">Log In</a>
-            <a href="#signup" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-edit">Sign Up</a>
-        </div>
-        
-        <div data-role="footer" data-position="fixed">
-           
-            <div data-role="navbar">
-                <ul>
-                    <li><a data-rel="back" data-icon="carat-l"></a></li>
-                    <li><a href="#add" data-icon="edit"></a></li>
-                    <li><a href="#home" data-icon="home"></a></li>
-                    <li><a href="#login" data-icon="myicon"></a></li>
-                    <li><a href="#side" data-icon="search"></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-<!-------------------------------------------------------------------------------------------LOGIN-->
-    
-    
-    
-    
-<!------------------------------------------------------------------------------------------SIGNUP-->
-    <div data-role="page" id="signup">
-       
-        <div data-role="header">
-            <h1>SIGN UP</h1>
-        </div>
-       
-        <div data-role="main" class="ui-content"></div>
-        
-        <div id="side" data-position="right" data-role="panel" data-display="overlay">
-            <form  action="">
-                <input type="text" placeholder="Search...">
-             </form>
-            <a href="#home" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-home">Home</a>
-            <a href="#add" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-edit">Add</a>
-            <a href="#extras" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-cloud">Extras</a>
-            <a href="#login" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-myicon">Log In</a>
-            <a href="#signup" class="ui-btn ui-shadow ui-corner-all ui-btn-icon-left ui-icon-edit">Sign Up</a>
-        </div>
-        
-        <div data-role="footer" data-position="fixed">
-           
-            <div data-role="navbar">
-                <ul>
-                    <li><a data-rel="back" data-icon="carat-l"></a></li>
-                    <li><a href="#add" data-icon="edit"></a></li>
-                    <li><a href="#home" data-icon="home"></a></li>
-                    <li><a href="#login" data-icon="myicon"></a></li>
-                    <li><a href="#side" data-icon="search"></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-<!------------------------------------------------------------------------------------------SIGNUP-->
+          <!-- Top Navbar -->
+          <f7-navbar title="My App" back-link="Back"></f7-navbar>
 
-    
-    
-      
-      
-      
-      
-    </body>
+<!-- Renders to: -->
+
+<div class="navbar">
+  <div class="navbar-inner sliding">
+    <div class="left">
+      <a href="#" class="back link">
+        
+        <!-- Back link text rendered only for iOS theme -->
+        <span>Back</span>
+      </a>
+    </div>
+    <div class="title">RECIPEiT</div>
+  </div>
+</div>
+
+          <!-- Toolbar -->
+          <div class="toolbar">
+            <div class="toolbar-inner">
+              <!-- Toolbar links -->
+              <a href="#" class="link">Link 1</a>
+              <a href="#" class="link">Link 2</a>
+              <a href="#" class="link">Link 2</a>
+              <a href="#" class="link">Link 2</a>
+            </div>
+          </div>
+
+          <!-- Scrollable page content -->
+          <div class="page-content">
+            <div class="card">
+              <div  class="card-content card-content-padding">This is a simple card with plain text, but cards can also contain their own header, footer, list view, image, or any other element.
+              </div>
+            </div>
+            
+            
+            
+            <div class="card">
+             
+              <div class="card-header">Card header</div>
+              <div class="card-content card-content-padding" >Card with header and footer. Card headers are used to display card titles and footers for additional information or just for custom actions.</div>
+              
+              <i class="f7-icons add_round_fill">Home</i>
+              <!-- Slider container -->
+                <div class="swiper-container swiper-init demo-swiper">
+                    <!-- Slides wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide lazy lazy-fade-in" data-background="res/screen/img2.jpg">
+                        
+                        </div>
+                        <div class="swiper-slide lazy" data-background="res/screen/img1.jpg">
+                        
+                        </div> 
+                    </div>
+                    
+                </div>
+                
+                
+              <div class="card-footer">Card Footer</div>
+              
+            </div>
+            
+            
+            
+            
+            
+            <div class="card">
+              <div class="card-content card-content-padding">Another card. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat sem est, non tincidunt ligula volutpat sit amet. Mauris aliquet magna justo. </div>
+            </div>  
+            <div class="card">
+  <div class="card-content card-content-padding">This is a simple card with plain text, but cards can also contain their own header, footer, list view, image, or any other element.</div>
+</div>
+<div class="card">
+  <div class="card-header">Card header</div>
+  <div class="card-content card-content-padding">Card with header and footer. Card headers are used to display card titles and footers for additional information or just for custom actions.</div>
+  <div class="card-footer">Card Footer</div>
+</div>
+<div class="card">
+  <div class="card-content card-content-padding">Another card. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat sem est, non tincidunt ligula volutpat sit amet. Mauris aliquet magna justo. </div>
+</div>  
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Path to Framework7 Library JS-->
+    <script type="text/javascript" src="framework7-2.2.1/dist/js/framework7.min.js"></script>
+    <!-- Path to your app js-->
+    <script type="text/javascript" src="js/index.js"></script>
+  </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -1,3 +1,10 @@
+@import url("../framework7-2.2.1/icons/css/framework7-icons.css");
 .ui-icon-myicon:after {
 	background-image: url(../res/icn/login.png);
+}
+.demo-swiper {
+  height: 150px;
+}
+.size-25{
+    font-size: 25px;
 }
