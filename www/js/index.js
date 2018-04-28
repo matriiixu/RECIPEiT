@@ -12,16 +12,42 @@ var app = new Framework7({
   // Add default routes
   routes: [
     {
-      path: '/about/',
-      url: 'about.html',
+      path: '/pagetwo/',
+      url: 'pagetwo.html',
     },
   ],
     
   // ... other parameters
 });
-
 var mainView = app.views.create('.view-main');
 var swiper = app.swiper.create('.swiper-container', {
     speed: 100
 
 });
+
+// create searchbar
+var searchbar = app.searchbar.create({
+  el: '.searchbar',
+  searchContainer: '.list',
+  searchIn: '.item-title',
+  on: {
+    search(sb, query, previousQuery) {
+      //console.log(query, previousQuery);
+    }
+  }
+});
+
+var login = document.getElementById('login').addEventListener('click', formSubmit);
+var homebtn = document.getElementById('homebtn').addEventListener('click', homeRedirect);
+var dashboardbtn = document.getElementById('dashboardbtn').addEventListener('click', dashboardRedirect);
+function homeRedirect(){
+    window.location.href = "index.html";
+}
+function dashboardRedirect(){
+    window.location.href = "dashboard.html";
+}
+function formSubmit(){
+    console.log('submitted');
+    document.getElementById('myForm').submit();
+    //window.location.href = "index.html";
+}
