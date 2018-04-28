@@ -1,119 +1,447 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!-- Required meta tags-->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <!-- Color theme for statusbar -->
-    <meta name="theme-color" content="#2196f3">
-    <!-- Your app title -->
-    <title>My App</title>
-    <!-- Path to Framework7 Library CSS -->
-    <link rel="stylesheet" href="framework7-2.2.1/dist/css/framework7.min.css">
-    <link rel="stylesheet" href="framework7-2.2.1/icons/css/framework7-icons.css">
-    <link rel="stylesheet" href="styles/index.css">
-  </head>
-  <body>
-    <!-- App root element -->
-    <div id="app">
-      <!-- Statusbar overlay -->
-      <div class="statusbar"></div>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, minimal-ui, viewport-fit=cover">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <title>RECIPEiT</title>
+        <!-- Path to Framework7 Library CSS -->
+        <link rel="stylesheet" href="framework7-2.2.1/dist/css/framework7.min.css">
+        <link rel="stylesheet" href="framework7-2.2.1/icons/css/framework7-icons.css">
+        <link rel="stylesheet" href="styles/index.css">
+    </head>
+    <body>
+        <!-- App root element -->
+        <div id="app">
+           
+            <!-- Your main view, should have "view-main" class -->
+            <div class="view view-main">
+               
+                <!-- Initial Page, "data-name" contains page name -->
+                <div data-name="home" class="page">
 
-      <!-- Your main view, should have "view-main" class -->
-      <div class="view view-main">
-        <!-- Initial Page, "data-name" contains page name -->
-        <div data-name="home" class="page">
-
-          <!-- Top Navbar -->
-          <f7-navbar title="My App" back-link="Back"></f7-navbar>
-
-<!-- Renders to: -->
-
-<div class="navbar">
-  <div class="navbar-inner sliding">
-    <div class="left">
-      <a href="#" class="back link">
-        
-        <!-- Back link text rendered only for iOS theme -->
-        <span>Back</span>
-      </a>
-    </div>
-    <div class="title">RECIPEiT</div>
-  </div>
-</div>
-
-          <!-- Toolbar -->
-          <div class="toolbar">
-            <div class="toolbar-inner">
-              <!-- Toolbar links -->
-              <a href="#" class="link">Link 1</a>
-              <a href="#" class="link">Link 2</a>
-              <a href="#" class="link">Link 2</a>
-              <a href="#" class="link">Link 2</a>
-            </div>
-          </div>
-
-          <!-- Scrollable page content -->
-          <div class="page-content">
-            <div class="card">
-              <div  class="card-content card-content-padding">This is a simple card with plain text, but cards can also contain their own header, footer, list view, image, or any other element.
-              </div>
-            </div>
-            
-            
-            
-            <div class="card">
-             
-              <div class="card-header">Card header</div>
-              <div class="card-content card-content-padding" >Card with header and footer. Card headers are used to display card titles and footers for additional information or just for custom actions.</div>
-              
-              <i class="f7-icons add_round_fill">Home</i>
-              <!-- Slider container -->
-                <div class="swiper-container swiper-init demo-swiper">
-                    <!-- Slides wrapper -->
-                    <div class="swiper-wrapper">
-                        <!-- Slides -->
-                        <div class="swiper-slide lazy lazy-fade-in" data-background="res/screen/img2.jpg">
-                        
+                    <!-- Top Navbar -->
+                    <f7-navbar title="RECIPEiT" back-link="Back"></f7-navbar>
+                        <!-- Renders to: -->
+                        <div class="navbar">
+                            <div class="navbar-inner sliding">
+                                <div class="left">
+                                    <a href="#" class="back link">
+                                    <!-- Back link text rendered only for iOS theme -->
+                                    <i class="f7-icons size-20">chevron_left</i>
+                                    </a>
+                                </div>
+                                <div class="title"><a href="#">RECIPEiT</a></div>
+                            </div>
                         </div>
-                        <div class="swiper-slide lazy" data-background="res/screen/img1.jpg">
+
+                    <!-- Toolbar -->
+                    <div class="toolbar">
+                        <div class="toolbar-inner">
+                            <!-- Toolbar links -->
+                            <a href="#" class="link"><i class="f7-icons size-20">add_round</i></a>
+                            <a href="#" class="link"><i class="f7-icons size-20">home</i></a>
+                            <a href="#" class="link"><i class="f7-icons size-20">search</i></a>
+                        </div>
+                    </div>
+
+                    <!-- Scrollable page content -->
+                    <div class="page-content">
                         
-                        </div> 
+                        <!-- RECIPE 1 -->
+                        <div class="card">
+                            <!-- Title -->
+                            <div class="card-header">PIZZA</div>
+                            <!-- Slider container -->
+                            <div class="swiper-container swiper-init demo-swiper">
+                                <!-- Slides wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide lazy lazy-fade-in" data-background="res/screen/img2.jpg"></div>
+                                    <div class="swiper-slide lazy" data-background="res/screen/img1.jpg"></div> 
+                                </div>
+                            </div>
+                            <!-- Short Description -->
+                            <div class="card-content card-content-padding" >
+                                <p>This section contains directions of how to prepare the recipe. It may or may not contain aspects such as time of preparation or extra seasoning.</p>
+                            </div>
+                            <!-- Link to Popup -->
+                            <div class="card-footer">
+                                <a href="#" class="button col popup-open" data-popup=".recipe1-popup">See</a>
+                            </div>
+                        </div>
+
+                        <!--POPUP 1-->
+                        <div class="popup recipe1-popup">
+                            <div class="view">
+                            <!-- Initial Page, "data-name" contains page name -->
+                                <div data-name="recipe1-popup" class="page">
+                                    <!--POPUP Navbar-->
+                                    <div class="navbar">
+                                        <div class="navbar-inner sliding">
+                                            <div class="right">
+                                                <f7-navbar title="RECIPEiT" back-link="Back">
+                                                    <a href="#" class="popup-close link"><i class="f7-icons size-30">close</i></a>
+                                                </f7-navbar>
+                                            </div>
+                                            <!-- Title of Popup -->
+                                            <div class="title">PIZZA</div>
+                                        </div>
+                                    </div>
+                                    <!--POPUP Content-->
+                                    <div class="page-content">
+                                        <div class="block">
+                                            <!-- Directions Section -->
+                                            <div class="block-title"><p>Directions of Cooking</p></div>
+                                            <!-- This block will be inset only on tablets (large screens) -->
+                                            <div class="block block-strong">
+                                                <!-- This block will be inset only on tablets (large screens) -->
+                                                <p>Donec et nulla auctor massa pharetra adipiscing ut sit amet sem. Suspendisse molestie velit vitae mattis tincidunt. Ut sit amet quam mollis, vulputate turpis vel, sagittis felis. </p>
+                                            </div>
+
+                                            <!--INGREDIENDS-->
+                                            <div class="block-title"><p>Ingredients</p></div>
+                                            <div class="card data-table">
+                                                <table>
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="label-cell">Ingredient</th>
+                                                            <th class="numeric-cell">Number / Qnty</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="label-cell">Dough</td>
+                                                            <td class="numeric-cell">100g</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="label-cell">Tomatos</td>
+                                                            <td class="numeric-cell">3 pcs</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="label-cell">Salami</td>
+                                                            <td class="numeric-cell">300 g</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="label-cell">Dough</td>
+                                                            <td class="numeric-cell">100g</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="label-cell">Tomatos</td>
+                                                            <td class="numeric-cell">3 pcs</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="label-cell">Salami</td>
+                                                            <td class="numeric-cell">300 g</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="label-cell">Dough</td>
+                                                            <td class="numeric-cell">100g</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="label-cell">Tomatos</td>
+                                                            <td class="numeric-cell">3 pcs</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="label-cell">Salami</td>
+                                                            <td class="numeric-cell">300 g</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                            <!--OR USE A LIST-->
+                                            <!--<div class="list simple-list"><ul><li>Item 1</li><li>Item 2</li> <li>Item 3</li></ul></div>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <!-- RECIPE 2 -->
+                        <div class="card">
+                            <!-- Title -->
+                            <div class="card-header">BURGER</div>
+                            <!-- Slider container -->
+                            <div class="swiper-container swiper-init demo-swiper">
+                                <!-- Slides wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide lazy lazy-fade-in" data-background="res/screen/img1.jpg"></div>
+                                    <div class="swiper-slide lazy" data-background="res/screen/img3.jpg"></div> 
+                                </div>
+                            </div>
+                            <!-- Short Description -->
+                            <div class="card-content card-content-padding" >
+                                <p>This section contains directions of how to prepare the recipe. It may or may not contain aspects such as time of preparation or extra seasoning.</p>
+                            </div>
+                            <!-- Link to Popup -->
+                            <div class="card-footer">
+                                <a href="#" class="button col popup-open" data-popup=".recipe2-popup">See</a>
+                            </div>
+                        </div>
+
+                        <!--POPUP 2-->
+                        <div class="popup recipe2-popup">
+                            <div class="view">
+                            <!-- Initial Page, "data-name" contains page name -->
+                                <div data-name="recipe1-popup" class="page">
+                                    <!--POPUP Navbar-->
+                                    <div class="navbar">
+                                        <div class="navbar-inner sliding">
+                                            <div class="right">
+                                                <f7-navbar title="RECIPEiT" back-link="Back">
+                                                    <a href="#" class="popup-close link"><i class="f7-icons size-30">close</i></a>
+                                                </f7-navbar>
+                                            </div>
+                                            <!-- Title of Popup -->
+                                            <div class="title">BURGER</div>
+                                        </div>
+                                    </div>
+                                    <!--POPUP Content-->
+                                    <div class="page-content">
+                                        <div class="block">
+                                            <!-- Directions Section -->
+                                            <div class="block-title"><p>Directions of Cooking</p></div>
+                                            <!-- This block will be inset only on tablets (large screens) -->
+                                            <div class="block block-strong">
+                                                <!-- This block will be inset only on tablets (large screens) -->
+                                                <p>Donec et nulla auctor massa pharetra adipiscing ut sit amet sem. Suspendisse molestie velit vitae mattis tincidunt. Ut sit amet quam mollis, vulputate turpis vel, sagittis felis. </p>
+                                            </div>
+
+                                            <!--INGREDIENDS-->
+                                            <div class="block-title"><p>Ingredients</p></div>
+                                            <div class="card data-table">
+                                                <table>
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="label-cell">Ingredient</th>
+                                                            <th class="numeric-cell">Number / Qnty</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="label-cell">Dough</td>
+                                                            <td class="numeric-cell">100g</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="label-cell">Tomatos</td>
+                                                            <td class="numeric-cell">3 pcs</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="label-cell">Salami</td>
+                                                            <td class="numeric-cell">300 g</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="label-cell">Dough</td>
+                                                            <td class="numeric-cell">100g</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="label-cell">Tomatos</td>
+                                                            <td class="numeric-cell">3 pcs</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="label-cell">Salami</td>
+                                                            <td class="numeric-cell">300 g</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="label-cell">Dough</td>
+                                                            <td class="numeric-cell">100g</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="label-cell">Tomatos</td>
+                                                            <td class="numeric-cell">3 pcs</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="label-cell">Salami</td>
+                                                            <td class="numeric-cell">300 g</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                            <!--OR USE A LIST-->
+                                            <!--<div class="list simple-list"><ul><li>Item 1</li><li>Item 2</li> <li>Item 3</li></ul></div>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        
+                        <!-- RECIPE 3 -->
+                        <div class="card">
+                            <!-- Title -->
+                            <div class="card-header">CHICKEN WINGS</div>
+                            <!-- Slider container -->
+                            <div class="swiper-container swiper-init demo-swiper">
+                                <!-- Slides wrapper -->
+                                <div class="swiper-wrapper">
+                                    <!-- Slides -->
+                                    <div class="swiper-slide lazy lazy-fade-in" data-background="res/screen/img6.jpg"></div>
+                                    <div class="swiper-slide lazy" data-background="res/screen/img7.jpg"></div> 
+                                </div>
+                            </div>
+                            <!-- Short Description -->
+                            <div class="card-content card-content-padding" >
+                                <p>This section contains directions of how to prepare the recipe. It may or may not contain aspects such as time of preparation or extra seasoning.</p>
+                            </div>
+                            <!-- Link to Popup -->
+                            <div class="card-footer">
+                                <a href="#" class="button col popup-open" data-popup=".recipe3-popup">See</a>
+                            </div>
+                        </div>
+
+                        <!--POPUP 3-->
+                        <div class="popup recipe3-popup">
+                            <div class="view">
+                            <!-- Initial Page, "data-name" contains page name -->
+                                <div data-name="recipe1-popup" class="page">
+                                    <!--POPUP Navbar-->
+                                    <div class="navbar">
+                                        <div class="navbar-inner sliding">
+                                            <div class="right">
+                                                <f7-navbar title="RECIPEiT" back-link="Back">
+                                                    <a href="#" class="popup-close link"><i class="f7-icons size-30">close</i></a>
+                                                </f7-navbar>
+                                            </div>
+                                            <!-- Title of Popup -->
+                                            <div class="title">CHICKEN WINGS</div>
+                                        </div>
+                                    </div>
+                                    <!--POPUP Content-->
+                                    <div class="page-content">
+                                        <div class="block">
+                                            <!-- Directions Section -->
+                                            <div class="block-title"><p>Directions of Cooking</p></div>
+                                            <!-- This block will be inset only on tablets (large screens) -->
+                                            <div class="block block-strong">
+                                                <!-- This block will be inset only on tablets (large screens) -->
+                                                <p>Donec et nulla auctor massa pharetra adipiscing ut sit amet sem. Suspendisse molestie velit vitae mattis tincidunt. Ut sit amet quam mollis, vulputate turpis vel, sagittis felis. </p>
+                                            </div>
+
+                                            <!--INGREDIENDS-->
+                                            <div class="block-title"><p>Ingredients</p></div>
+                                            <div class="card data-table">
+                                                <table>
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="label-cell">Ingredient</th>
+                                                            <th class="numeric-cell">Number / Qnty</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="label-cell">Dough</td>
+                                                            <td class="numeric-cell">100g</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="label-cell">Tomatos</td>
+                                                            <td class="numeric-cell">3 pcs</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="label-cell">Salami</td>
+                                                            <td class="numeric-cell">300 g</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="label-cell">Dough</td>
+                                                            <td class="numeric-cell">100g</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="label-cell">Tomatos</td>
+                                                            <td class="numeric-cell">3 pcs</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="label-cell">Salami</td>
+                                                            <td class="numeric-cell">300 g</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="label-cell">Dough</td>
+                                                            <td class="numeric-cell">100g</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="label-cell">Tomatos</td>
+                                                            <td class="numeric-cell">3 pcs</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="label-cell">Salami</td>
+                                                            <td class="numeric-cell">300 g</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+
+                                            <!--OR USE A LIST-->
+                                            <!--<div class="list simple-list"><ul><li>Item 1</li><li>Item 2</li> <li>Item 3</li></ul></div>-->
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
                     </div>
                     
                 </div>
                 
-                
-              <div class="card-footer">Card Footer</div>
-              
             </div>
             
-            
-            
-            
-            
-            <div class="card">
-              <div class="card-content card-content-padding">Another card. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat sem est, non tincidunt ligula volutpat sit amet. Mauris aliquet magna justo. </div>
-            </div>  
-            <div class="card">
-  <div class="card-content card-content-padding">This is a simple card with plain text, but cards can also contain their own header, footer, list view, image, or any other element.</div>
-</div>
-<div class="card">
-  <div class="card-header">Card header</div>
-  <div class="card-content card-content-padding">Card with header and footer. Card headers are used to display card titles and footers for additional information or just for custom actions.</div>
-  <div class="card-footer">Card Footer</div>
-</div>
-<div class="card">
-  <div class="card-content card-content-padding">Another card. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse feugiat sem est, non tincidunt ligula volutpat sit amet. Mauris aliquet magna justo. </div>
-</div>  
-          </div>
         </div>
-      </div>
-    </div>
+        
+        
+        
     <!-- Path to Framework7 Library JS-->
     <script type="text/javascript" src="framework7-2.2.1/dist/js/framework7.min.js"></script>
-    <!-- Path to your app js-->
+    <!-- Path to index.js-->
     <script type="text/javascript" src="js/index.js"></script>
   </body>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 </html>
