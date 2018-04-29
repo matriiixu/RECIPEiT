@@ -26,5 +26,5 @@
 	
 	<access origin="*"/>
    	<plugin name="cordova-plugin-whitelist" version="1" />
-   	<plugin name="org.apache.cordova.camera" version="1" />
+   	<plugin name="cordova-plugin-camera" version="1" />
 </widget>
