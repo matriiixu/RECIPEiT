@@ -43,6 +43,7 @@ var dashboardbtn = document.getElementById('dashboardbtn').addEventListener('cli
 function homeRedirect(){
     window.location.href = "index.html";
 }
+
 function dashboardRedirect(){
     window.location.href = "dashboard.html";
 }
@@ -51,3 +52,33 @@ function formSubmit(){
     document.getElementById('myForm').submit();
     //window.location.href = "index.html";
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
