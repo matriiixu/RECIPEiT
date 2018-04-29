@@ -39,28 +39,106 @@
 
                     <!-- Scrollable page content -->
                     <div class="page-content">
-                        <div class="card">
-                            <!-- Title -->
-                            <div class="card-header">PIZZA</div>
-                            <!-- Slider container -->
-                            <div class="swiper-container swiper-init demo-swiper">
-                                <!-- Slides wrapper -->
-                                <div class="swiper-wrapper">
-                                    <!-- Slides -->
-                                    <div class="swiper-slide lazy lazy-fade-in" data-background="res/screen/img2.jpg"></div>
-                                    <div class="swiper-slide lazy" data-background="res/screen/img1.jpg"></div> 
-                                </div>
+                        <form action="dashboard.php" method="POST" id="myForm">
+                            <div class="list no-hairlines-md">
+                                <ul>
+                                   
+                                    <!-- Name of Recipe -->
+                                    <li class="item-content item-input item-input-with-info">
+                                        <div class="item-media">
+                                            <i class="f7-icons demo-list-icon">tags_fill</i>
+                                        </div>
+                                        <div class="item-inner">
+                                            <div class="item-title item-label">Title</div>
+                                            <div class="item-input-wrap">
+                                                <input name="mealName" type="text" placeholder="Name of recipe" required validate>
+                                                <span class="input-clear-button"></span>
+                                                <div class="item-input-info"></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <!-- Desctiption of Recipe -->
+                                    <li class="item-content item-input item-input-with-info">
+                                        <div class="item-media">
+                                            <i class="f7-icons demo-list-icon">list_fill</i>
+                                        </div>
+                                        <div class="item-inner">
+                                            <div class="item-title item-label">Description</div>
+                                            <div class="item-input-wrap">
+                                                <textarea name="mealDescription" class="resizable" placeholder="What's it like?" required validate></textarea>
+                                                <span class="input-clear-button"></span>
+                                                <div class="item-input-info"></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <!-- Directions of Cooking -->
+                                    <li class="item-content item-input item-input-with-info">
+                                        <div class="item-media">
+                                            <i class="f7-icons demo-list-icon">timer_fill</i>
+                                        </div>
+                                        <div class="item-inner">
+                                            <div class="item-title item-label">Directions</div>
+                                            <div class="item-input-wrap">
+                                                <textarea name="mealDirections" class="resizable" placeholder="How to cook it?" required validate></textarea>
+                                                <span class="input-clear-button"></span>
+                                                <div class="item-input-info"></div>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <!-- Image -->
+                                    <li class="item-content item-input item-input-with-info">
+                                        <div class="item-media">
+                                            <i class="f7-icons demo-list-icon">photos_fill</i>
+                                        </div>
+                                        <div class="item-inner">
+                                            <div class="item-title item-label">Image</div>
+                                            <div class="item-media button button-raised button-fill fileUpload">
+                                                <input class="button button-small button-fill" type='file' id='file' accept="image/*;capture=camera">
+                                                
+                                                <span class="input-clear-button"></span>
+                                                <div class="item-input-info"></div>
+                                                <span id="output"></span>
+                                            </div>
+                                            <a href="#" id="image" class="button upload-image">Upload</a>
+                                        </div>
+                                    </li>
+                                    
+                                    <!-- Photo -->
+                                    <li class="item-content item-input item-input-with-info">
+                                        <div class="item-media">
+                                            <i class="f7-icons demo-list-icon">camera_fill</i>
+                                        </div>
+                                        <div class="item-inner">
+                                            <div class="item-title item-label">Image</div>
+                                            <div class="item-media button button-raised button-fill fileUpload">
+                                               
+                                                <input class="button button-small button-fill" type='file' id='file' accept="image/*;capture=camera">
+                                                
+                                                <span class="input-clear-button"></span>
+                                                <div class="item-input-info"></div>
+                                                <span id="output"></span>
+                                            </div>
+                                            <a href="#" id="image" class="button upload-image">Upload</a>
+                                        </div>
+                                    </li>
+                                    
+                                    
+                                    
+                                    <!--<li class="item-content item-input item-input-with-info">
+                                    <div class="item-content">
+                                    <div class="item-media button button-raised button-fill fileUpload">
+                                        <input id="tx_file_programa" type="file" class="upload"/>
+                                    </div>-->
+                                   
+                                    </li>
+                                    
+                                    
+                                </ul>
                             </div>
-                            <!-- Short Description -->
-                            <div class="card-content card-content-padding" >
-                                <p>This section contains directions of how to prepare the recipe. It may or may not contain aspects such as time of preparation or extra seasoning.</p>
-                            </div>
-                            <!-- Link to Popup -->
-                            <div class="card-footer">
-                                <a href="#" class="button col popup-open" data-popup=".recipe1-popup">See</a>
-                            </div>
-                        </div>
-                        
+                        </form>
                     </div>
                     
                     
@@ -144,6 +222,8 @@
         
     <!-- Path to Framework7 Library JS-->
     <script type="text/javascript" src="framework7-2.2.1/dist/js/framework7.min.js"></script>
+    <!-- Path to jQuery-->
+    <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <!-- Path to index.js-->
     <script type="text/javascript" src="js/index.js"></script>
     <script type="text/javascript" src="js/dashboard.js"></script>
