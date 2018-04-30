@@ -7,7 +7,7 @@ function onDeviceReady() {
     phonegapcamera = document.getElementById('phonegapcamera');
     phonegapcamera.addEventListener('click', capturePhoto)
 	destinationType=navigator.camera.DestinationType;
-    image = document.getElementById('image').addEventListener('click',outputImg);
+   // image = document.getElementById('image').addEventListener('click',outputImg);
     file = document.getElementById('file');
     output = document.getElementById('output');
 }
