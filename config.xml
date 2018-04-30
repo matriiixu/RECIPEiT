@@ -16,7 +16,7 @@
         Iulian Oana
     </author>
 
-    <preference name="phonegap-version" value="cli-7.0.1" />
+    <!--<preference name="phonegap-version" value="cli-7.0.1" />-->
 	
     <preference name="permissions"  value="none"/>   
     
@@ -26,4 +26,5 @@
 	
 	<access origin="*"/>
    	<plugin name="cordova-plugin-whitelist" version="1" />
+   	<plugin name="cordova-plugin-camera" spec="~4.0.3" />
 </widget>
