@@ -34,7 +34,7 @@ function onPhotoDataSuccess(imageData) {
 }
 function RecipeSubmit(){
     alert('submitted');
-    recipeForm.submit();
+    //recipeForm.submit();
     window.location.href = "index.html";
 }
 
