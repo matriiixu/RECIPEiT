@@ -29,9 +29,9 @@ function onFail(message) {
       alert('Failed because: ' + message);
 }
 
-function processResults(content) {
- //alert(param[index].table_name);
-alert(content[0].meal)
+function processResults(meal) {
+ //alert(param[index].column_name);
+alert(meal[0].mealName)
 }
 
 function error(err) {
