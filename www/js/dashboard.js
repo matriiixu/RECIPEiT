@@ -31,7 +31,7 @@ function onFail(message) {
 
 function processResults(meal) {
  //alert(param[index].column_name);
-alert(meal[0].mealName)
+//alert(meal[0].mealName)
 }
 
 function error(err) {
