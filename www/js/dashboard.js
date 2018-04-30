@@ -8,8 +8,8 @@ function onDeviceReady() {
 	destinationType=navigator.camera.DestinationType;
     file = document.getElementById('file');
     output = document.getElementById('output');
-    
-    Backendless.Data.of("Task").find().then(processResults).catch(error);
+    //Data.of(name_of_table)
+    Backendless.Data.of("meal").find().then(processResults).catch(error);
 }
 
 function capturePhoto() {
@@ -29,9 +29,9 @@ function onFail(message) {
       alert('Failed because: ' + message);
 }
 
-function processResults(tasks) {
- //display the first task in an array of tasks.
-alert(tasks[0].Task)
+function processResults(content) {
+ //alert(param[index].table_name);
+alert(content[0].meal)
 }
 
 function error(err) {
