@@ -96,13 +96,16 @@
                                         <div class="item-inner">
                                             <div class="item-title item-label">Image</div>
                                             <div class="item-media button button-raised button-fill fileUpload">
-                                                <input class="button button-small button-fill" type='file' id='file' accept="image/*;capture=camera">
+                                               
+                                               <button id="phonegapcamera" onclick="capturePhoto();">Capture Photo</button> <br>
+       
+                                              <img style="display:none;width:200px;height:200px;" id="image" src="" />
+                                                <!--<input class="button button-small button-fill" type='file' id='file' accept="image/*;capture=camera">-->
                                                 
                                                 <span class="input-clear-button"></span>
                                                 <div class="item-input-info"></div>
                                                 <span id="output"></span>
                                             </div>
-                                            <a href="#" id="image" class="button upload-image">Upload</a>
                                         </div>
                                     </li>
                                                                         
