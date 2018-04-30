@@ -4,11 +4,13 @@ var image, file, output, phonegapcamera;
 function onDeviceReady() {
     
     alert("onDeviceready");
+    phonegapcamera = document.getElementById('phonegapcamera');
+    phonegapcamera.addEventListener('click', capturePhoto)
 	destinationType=navigator.camera.DestinationType;
     image = document.getElementById('image').addEventListener('click',outputImg);
     file = document.getElementById('file');
     output = document.getElementById('output');
-    phonegapcamera = document.getElementById('phonegapcamera').addEventListener('click', capturePhoto);
+    
 }
 
 function capturePhoto() {
