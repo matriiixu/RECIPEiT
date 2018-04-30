@@ -8,6 +8,8 @@ function onDeviceReady() {
 	destinationType=navigator.camera.DestinationType;
     file = document.getElementById('file');
     output = document.getElementById('output');
+
+    Backendless.Data.of("recipeit").find().then(processResults).catch(error);
 }
 
 function capturePhoto() {
@@ -25,4 +27,13 @@ function onPhotoDataSuccess(imageData) {
 
 function onFail(message) {
       alert('Failed because: ' + message);
+}
+
+
+function processResults(meal) {
+
+alert(meal[0].meal)
+}
+function error(err) {
+ alert(err);
 }
