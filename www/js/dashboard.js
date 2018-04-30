@@ -10,7 +10,6 @@ function onDeviceReady() {
     image = document.getElementById('image').addEventListener('click',outputImg);
     file = document.getElementById('file');
     output = document.getElementById('output');
-    
 }
 
 function capturePhoto() {
