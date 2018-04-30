@@ -1,19 +1,13 @@
-
-
-
 document.addEventListener("deviceready",onDeviceReady,false);
-
+var destinationType; //used sets what should be returned (image date OR file path to image for example)
+var image, file, output;
 function onDeviceReady() {
-    var destinationType; //used sets what should be returned (image date OR file path to image for example)
-
+    
+    
 	destinationType=navigator.camera.DestinationType;
-    var image = document.getElementById('image').addEventListener('click',outputImg);
-var file = document.getElementById('file');
-var output = document.getElementById('output');
-function outputImg(){
-    output.innerHTML = file.value;
-    console.log(file.value);
-}
+    image = document.getElementById('image').addEventListener('click',outputImg);
+    file = document.getElementById('file');
+    output = document.getElementById('output');
 }
 
 function capturePhoto() {
