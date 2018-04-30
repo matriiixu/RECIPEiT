@@ -9,7 +9,7 @@ function onDeviceReady() {
     file = document.getElementById('file');
     output = document.getElementById('output');
     
-    Backendless.Data.of("TASKS").find().then(processResults).catch(error);
+    Backendless.Data.of("Task").find().then(processResults).catch(error);
 }
 
 function capturePhoto() {
