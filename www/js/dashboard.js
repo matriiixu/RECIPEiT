@@ -9,7 +9,7 @@ function onDeviceReady() {
     file = document.getElementById('file');
     output = document.getElementById('output');
 
-    Backendless.Data.of("recipeit").find().then(processResults).catch(error);
+    Backendless.Data.of("meal").find().then(processResults).catch(error);
 }
 
 function capturePhoto() {
@@ -28,12 +28,9 @@ function onPhotoDataSuccess(imageData) {
 function onFail(message) {
       alert('Failed because: ' + message);
 }
-
-
 function processResults(meal) {
-
-alert(meal[0].meal)
+    alert(meal[0].mealName);
 }
 function error(err) {
- alert(err);
+    alert(err);
 }
