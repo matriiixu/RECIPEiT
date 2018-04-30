@@ -42,7 +42,7 @@
 
                     <!-- Scrollable page content -->
                     <div class="page-content">
-                        <form action="dashboard.html" method="POST" id="myForm">
+                        <form action="dashboard.php" method="POST" id="recipeForm">
                             <div class="list no-hairlines-md">
                                 <ul>
                                    
@@ -54,14 +54,14 @@
                                         <div class="item-inner">
                                             <div class="item-title item-label">Title</div>
                                             <div class="item-input-wrap">
-                                                <input name="mealName" type="text" placeholder="Name of recipe" required validate>
+                                                <input id="mealName" name="mealName" type="text" placeholder="Name of recipe" required validate>
                                                 <span class="input-clear-button"></span>
                                                 <div class="item-input-info"></div>
                                             </div>
                                         </div>
                                     </li>
                                     
-                                    <!-- Desctiption -->
+                                    <!-- Description -->
                                     <li class="item-content item-input item-input-with-info">
                                         <div class="item-media">
                                             <i class="f7-icons demo-list-icon">list_fill</i>
@@ -69,7 +69,7 @@
                                         <div class="item-inner">
                                             <div class="item-title item-label">Description</div>
                                             <div class="item-input-wrap">
-                                                <textarea name="mealDescription" class="resizable" placeholder="What's it like?" required validate></textarea>
+                                                <textarea  id="mealDescription" name="mealDescription" class="resizable" placeholder="What's it like?" required validate></textarea>
                                                 <span class="input-clear-button"></span>
                                                 <div class="item-input-info"></div>
                                             </div>
@@ -84,7 +84,7 @@
                                         <div class="item-inner">
                                             <div class="item-title item-label">Directions</div>
                                             <div class="item-input-wrap">
-                                                <textarea name="mealDirections" class="resizable" placeholder="How to cook it?" required validate></textarea>
+                                                <textarea id="mealDirections" name="mealDirections" class="resizable" placeholder="How to cook it?" required validate></textarea>
                                                 <span class="input-clear-button"></span>
                                                 <div class="item-input-info"></div>
                                             </div>
@@ -99,7 +99,7 @@
                                         <div class="item-inner">
                                             <div class="item-title item-label">Ingredients</div>
                                             <div class="item-input-wrap">
-                                                <textarea name="mealIngredients" class="resizable" placeholder="What does it contain?" required validate></textarea>
+                                                <textarea id="mealIngredients" name="mealIngredients" class="resizable" placeholder="What does it contain?" required validate></textarea>
                                                 <span class="input-clear-button"></span>
                                                 <div class="item-input-info"></div>
                                             </div>
@@ -114,8 +114,8 @@
                                         <div class="item-inner">
                                             <div class="item-title item-label">Image 1</div>
                                             <div class="item-media button button-raised button-fill fileUpload">
-                                               
-                                               <button class="button button-small button-fill" id="phonegapcamera">Browse</button> <br>
+                                               <input type="file" id="image1" />
+                                               <!--<button class="button button-small button-fill" id="phonegapcamera">Browse</button> <br>-->
                                                 <span class="input-clear-button"></span>
                                                 <div class="item-input-info"></div>
                                                 <span id="output"></span>
@@ -131,8 +131,8 @@
                                         <div class="item-inner">
                                             <div class="item-title item-label">Image 2</div>
                                             <div class="item-media button button-raised button-fill fileUpload">
-                                               
-                                               <button class="button button-small button-fill" id="phonegapcamera">Browse</button> <br>
+                                               <input type="file" id="image2" />
+                                              <!-- <button class="button button-small button-fill" id="phonegapcamera">Browse</button> <br>-->
                                                 <span class="input-clear-button"></span>
                                                 <div class="item-input-info"></div>
                                                 <span id="output"></span>
@@ -151,12 +151,27 @@
                                                
                                                <button class="button button-small button-fill" id="phonegapcamera">Capture Photo</button> <br>
                                                
-                                              <img style="display:none;width:200px;height:200px;" id="image" src="" />
+                                              <img style="display:none;width:200px;height:200px;" id="photo" src="" />
                                                 <!--<input class="button button-small button-fill" type='file' id='file' accept="image/*;capture=camera">-->
                                                 
                                                 <span class="input-clear-button"></span>
                                                 <div class="item-input-info"></div>
                                                 <span id="output"></span>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    
+                                    <!-- Submit -->
+                                    <li class="item-content item-input item-input-with-info">
+                                        <div class="item-media">
+                                            <i class="f7-icons demo-list-icon">cloud_upload_fill</i>
+                                        </div>
+                                        <div class="item-inner">
+                                            <div class="item-title item-label">Submit</div>
+                                            <div class="item-input-wrap">
+                                                <button class="button button-small button-fill" id="recipeSubmit">Add It</button>
+                                                <span class="input-clear-button"></span>
+                                                <div class="item-input-info"></div>
                                             </div>
                                         </div>
                                     </li>
@@ -251,7 +266,7 @@
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <!-- Path to index.js-->
     <script type="text/javascript" src="js/index.js"></script>
-    <script type="text/javascript" src="js/dashboard.js"></script>
+    <script type="text/javascript" src="js/dashboard.js" defer></script>
   </body>
   
   
