@@ -1,6 +1,9 @@
-document.addEventListener("deviceready",onDeviceReady,false);
 var destinationType; //used sets what should be returned (image date OR file path to image for example)
 var image, file, output, phonegapcamera, recipeSubmit, recipeForm, mealName, mealDescription, mealDirections, mealIngredients, image1, image2, photo;
+document.addEventListener("deviceready",onDeviceReady,false);
+$(document).on("click", "#recipeSubmit", onAddTask);
+
+
 function onDeviceReady() {
     alert("onDeviceready");
     phonegapcamera = document.getElementById('phonegapcamera');
@@ -8,16 +11,18 @@ function onDeviceReady() {
 	destinationType=navigator.camera.DestinationType;
     file = document.getElementById('file');
     output = document.getElementById('output');
-    recipeSubmit.getElementById('recipeSubmit');
-    recipeSubmit.addEventListener('click', RecipeSubmit);
-    recipeForm = document.getElementById('recipeForm');
     mealName = document.getElementById('mealName').value;
     mealDescription = document.getElementById('mealDescription').value;
     mealDirections = document.getElementById('mealDirections').value;
     mealIngredients = document.getElementById('mealIngredients').value;
+    image = document.getElementById('image').value;
     
     //Data.of(name_of_table)
     Backendless.Data.of("meal").find().then(processResults).catch(error);
+    Backendless.Data.of("meal").save(mealName).then(saved).catch(error);
+}
+function onAddTask() {
+    console.log("add button clicked");
 }
 
 function capturePhoto() {
@@ -27,15 +32,14 @@ function capturePhoto() {
 }
 	
 function onPhotoDataSuccess(imageData) {
-    alert("onPhotoDataSuccess");
 	var image = document.getElementById('image');
 	image.style.display = 'block';
 	image.src = "data:image/jpeg;base64," + imageData;
 }
-function RecipeSubmit(){
-    alert('submitted');
-    //recipeForm.submit();
-    window.location.href = "index.html";
+
+
+function saved(savedMeal) {
+console.log( "new Contact instance has been saved" + savedMeal);
 }
 
 function onFail(message) {
@@ -50,3 +54,34 @@ function processResults(meal) {
 function error(err) {
     alert(err);
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
