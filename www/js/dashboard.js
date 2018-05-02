@@ -1,68 +1,62 @@
 var destinationType; //used sets what should be returned (image date OR file path to image for example)
-var image, file, output, phonegapcamera, recipeSubmit, recipeForm, mealName, mealDescription, mealDirections, mealIngredients, image1, image2, photo;
-document.addEventListener("deviceready",onDeviceReady,false);
-$(document).on("click", "#recipeSubmit", onAddTask);
-
+var image, file, output, phonegapcamera, submitBtn, mealName, mealDescription, mealDirections, mealIngredients, image1, image2, photo;
+/*document.addEventListener("deviceready",onDeviceReady,false);*/
+onDeviceReady();
 
 function onDeviceReady() {
-    alert("onDeviceready");
-    phonegapcamera = document.getElementById('phonegapcamera');
-    phonegapcamera.addEventListener('click', capturePhoto)
-	destinationType=navigator.camera.DestinationType;
-    file = document.getElementById('file');
-    output = document.getElementById('output');
+    //console.log('device ready');
     mealName = document.getElementById('mealName').value;
     mealDescription = document.getElementById('mealDescription').value;
     mealDirections = document.getElementById('mealDirections').value;
     mealIngredients = document.getElementById('mealIngredients').value;
+    submitBtn = document.getElementById('submitBtn').addEventListener('click', onAddMeal);
     image = document.getElementById('image').value;
-    
-    //Data.of(name_of_table)
-    Backendless.Data.of("meal").find().then(processResults).catch(error);
-    Backendless.Data.of("meal").save(mealName).then(saved).catch(error);
+    // this line goes into the app initialization block
+    document.getElementById('image').addEventListener('change', handleFileSelect, false);
 }
-function onAddTask() {
-    console.log("add button clicked");
-}
-
-function capturePhoto() {
-    alert("capturePhoto");
-	navigator.camera.getPicture(onPhotoDataSuccess, onFail, { quality: 50,
-	destinationType: destinationType.DATA_URL });
-}
-	
-function onPhotoDataSuccess(imageData) {
-	var image = document.getElementById('image');
-	image.style.display = 'block';
-	image.src = "data:image/jpeg;base64," + imageData;
+  
+function handleFileSelect(evt) 
+{
+    //console.log('file uploaded');
+    file = evt.target.files[0]; // FileList object
 }
 
-
-function saved(savedMeal) {
-console.log( "new Contact instance has been saved" + savedMeal);
+function onAddMeal() {
+    Backendless.Files.upload( file, "my-folder" )
+    .then( function( fileURLs ) {
+       //console.log( "File successfully uploaded. Path to download: " + fileURLs.fileURL );
+        addMeal(fileURLs.fileURL);
+     })
+    .catch( function( error ) {
+       //console.log( "error - " + error.message );
+     });
 }
 
-function onFail(message) {
-      alert('Failed because: ' + message);
+function saved(savedMeal){
+      console.log( "New Recipe has been saved as: " + savedMeal.mealName);
+    homeRedirect();
 }
 
-function processResults(meal) {
- //alert(param[index].column_name);
-//alert(meal[0].mealName)
+function addMeal(fileUrl){
+    //console.log(fileUrl);
+    var mealName = $("#mealName").val();
+    var mealDescription = $("#mealDescription").val();
+    var mealDirections = $("#mealDirections").val();
+    var mealIngredients = $("#mealIngredients").val();
+
+    var newMeal = {};
+    newMeal.mealName = mealName;
+    newMeal.mealDescription = mealDescription;
+    newMeal.mealDirections = mealDirections;
+    newMeal.mealIngredients = mealIngredients;
+    //newMeal.img2URL = img2URL;
+    newMeal.img1URL = fileUrl;
+    Backendless.Data.of("meal").save(newMeal).then(saved).catch(error);
 }
 
 function error(err) {
     alert(err);
 }
-
-
-
-
-
-
-
-
-
 
 
 

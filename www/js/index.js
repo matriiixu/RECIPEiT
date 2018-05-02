@@ -1,4 +1,4 @@
-Backendless.initApp("38D2266B-EF1A-0CF3-FF65-A690213C4300","DB329507-4568-0329-FF40-946768BC9900");
+Backendless.initApp("38D2266B-EF1A-0CF3-FF65-A690213C4300","D3546A40-29FC-EAD4-FFDB-52225A01A900");
 var app = new Framework7({
   // App root element
   root: '#app',
