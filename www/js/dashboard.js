@@ -1,3 +1,4 @@
+Backendless.initApp("38D2266B-EF1A-0CF3-FF65-A690213C4300","D3546A40-29FC-EAD4-FFDB-52225A01A900");
 var destinationType; //used sets what should be returned (image date OR file path to image for example)
 var image, file, output, phonegapcamera, submitBtn, mealName, mealDescription, mealDirections, mealIngredients, image1, image2, photo;
 /*document.addEventListener("deviceready",onDeviceReady,false);*/
