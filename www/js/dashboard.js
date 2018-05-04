@@ -22,6 +22,7 @@ function handleFileSelect(evt)
 }
 
 function onAddMeal() {
+    //var path = "my-folder" + ID_of_recipe; //to be completed !!!
     Backendless.Files.upload( file, "my-folder" )
     .then( function( fileURLs ) {
        //console.log( "File successfully uploaded. Path to download: " + fileURLs.fileURL );
