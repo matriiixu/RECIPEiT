@@ -22,6 +22,8 @@
     
     <platform name="ios">
     </platform>
+    <platform name="android">
+    </platform>
 	
 	
 	<access origin="*"/>
