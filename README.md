@@ -1,5 +1,4 @@
 # RECIPEiT
-=======================
 ### Description
 A mobile application which allows users to create recipes.
 
@@ -25,4 +24,3 @@ All the login details can be found in the documentation in the introduction sect
 2) Click on the first app (RECIPEiT)
 3) Install it on your apple device
 ```
-=======================
