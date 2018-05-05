@@ -1,3 +1,4 @@
+//start the framework7 application
 var app = new Framework7({
   // App root element
   root: '#app',
@@ -36,17 +37,38 @@ var searchbar = app.searchbar.create({
     }
   }
 });
-
+//reference the html objects
 var login = document.getElementById('login').addEventListener('click', formSubmit);
 var homebtn = document.getElementById('homebtn').addEventListener('click', homeRedirect);
 var dashboardbtn = document.getElementById('dashboardbtn').addEventListener('click', dashboardRedirect);
+
+ /*METHOD
+ - Responsible for:
+    -redirecting the user to the homepage;
+ - Parameters:
+    -void;
+*/
 function homeRedirect(){
     window.location.href = "index.html";
 }
 
+
+ /*METHOD
+ - Responsible for:
+    -redirecting the user to the dashboard;
+ - Parameters:
+    -no param -> void;
+*/
 function dashboardRedirect(){
     window.location.href = "dashboard.html";
 }
+
+ /*METHOD
+ - Responsible for:
+    -submitting the form;
+ - Parameters:
+    -void;
+*/
 function formSubmit(){
     console.log('submitted');
     document.getElementById('myForm').submit();

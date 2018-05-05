@@ -8,6 +8,7 @@
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="js/backendless.js"></script>
         <script src="js/home.js"></script>
+        <script src="js/homepage.js"></script>
         <!-- Path to Framework7 Library CSS -->
         <link rel="stylesheet" href="framework7-2.2.1/dist/css/framework7.min.css">
         <link rel="stylesheet" href="framework7-2.2.1/icons/css/framework7-icons.css">
@@ -65,12 +66,34 @@
                         ?>
                         
                         <script>
+                            //creating the query object
                            var dataQueryBuilder = Backendless.DataQueryBuilder.create();
+                            //group the results by created(attribute)
                             dataQueryBuilder.setGroupBy( "created" );
+                            //gets the data from the meal table runs the method find passing the query object
+                            //then calls processResults method and errors to be sent in the error method
+                            //to be handled afterwards
                             Backendless.Data.of( "meal" ).find(dataQueryBuilder).then(processResults).catch(error);
+                            
+                            
+                        /*METHOD
+                         - Responsible for:
+                            -handling the data sent by the ajax call;
+                         - Parameters:
+                            -meal -> which is the data from within the meal table (table name);
+                        */
                         function  processResults(meal) {
+                            //reference the mainCtn div container
                             var mainCtn = document.getElementById('main-ctn');
+                            //start a loop that goes as long as the number of elements within the meal array
                             for (var i = 0; i < meal.length; i++) { 
+                            //write this in the html
+                            /*
+                            This html container is completed by embedding html in javascript.
+                            I have used this approach to be able concatenate the actual data from
+                            within the database with the right html sintax in order to display
+                            it properly on the screen.
+                            */
                             mainCtn.innerHTML = "<div id='"+meal[i].objectId+"' class='card'>"+ 
                                                     // TITLE
                                                     "<div class='card-header item-title'>"+ meal[i].mealName +"</div>" +
@@ -124,9 +147,18 @@
                                                 ;
                             }
                         }   
-                            function error(err) {
-                                console.log(err);
-                            }
+                            
+                            
+                        /*METHOD
+                         - Responsible for:
+                            -handling the error;
+                         - Parameters:
+                            -err -> which is the actual error passed by the backendless ajax call;
+                        */
+                        function error(err) {
+                            //display the error in the console
+                            console.log(err);
+                        }
                         </script>
                         
                         <!-- RECIPE 1 Template -->
@@ -260,7 +292,6 @@
     <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
     <!-- Path to index.js-->
     <script type="text/javascript" src="js/index.js"></script>
-    
   </body>
   
   
